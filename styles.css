@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Mr+Dafoe&family=Protest+Revolution&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins" sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(150deg, rgb(0, 225, 255), rgb(255, 0, 0));
+  color: #fff;
+}
+
+.ts-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #d9f1ff;
+  text-shadow:
+    0 0 8px #80d8ff,
+    0 0 14px #5ac8ff,
+    0 0 22px #38b6ff;
+  letter-spacing: 2px;
+  animation: shock 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes shock {
+  0% {
+    text-shadow:
+      0 0 6px #9ee6ff,
+      0 0 10px #63d1ff,
+      0 0 18px #22b8ff;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #c8f3ff,
+      0 0 18px #8fe4ff,
+      0 0 28px #4bc4ff;
+  }
+}
+
+.container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  backdrop-filter: blur(10px);
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+
+  opacity: 0;
+  animation: containerEnter 1s ease forwards;
+}
+
+.container:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  background: linear-gradient(30deg, skyblue, pink, skyblue, pink, skyblue);
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-clip: text;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.quote-box {
+  background: linear-gradient(
+    150deg,
+    rgba(132, 208, 238, 0.712),
+    rgba(255, 182, 193, 0.699)
+  );
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#quote {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#author {
+  display: block;
+  margin-top: 15px;
+  font-size: 18px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(135deg, skyblue, pink);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, pink, skyblue);
+}
+
+#copied-msg {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+  height: 20px;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, pink, skyblue);
+  color: #fff;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, skyblue, pink);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes containerEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes buttonPop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
